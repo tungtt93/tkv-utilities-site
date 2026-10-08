@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TKV Utilities — Công cụ miễn phí cho Windows nhanh hơn, gọn hơn, an toàn hơn</title>
+    <meta
+      name="description"
+      content="Miễn phí cho cộng đồng. Dọn dẹp, quản lý và tối ưu Windows 10/11 — không quảng cáo, không thu thập dữ liệu, an toàn trước hết."
+    />
+    <meta name="theme-color" content="#2563eb" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0b1220" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" href="assets/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" href="assets/icon-128.png" sizes="128x128" />
+    <link rel="apple-touch-icon" href="assets/icon-128.png" />
+    <link rel="canonical" href="https://tungtt93.github.io/tkv-utilities-site/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tungtt93.github.io/tkv-utilities-site/" />
+    <meta
+      property="og:title"
+      content="TKV Utilities — Công cụ miễn phí cho Windows nhanh hơn, gọn hơn, an toàn hơn"
+    />
+    <meta
+      property="og:description"
+      content="Miễn phí cho cộng đồng. Dọn dẹp, quản lý và tối ưu Windows 10/11 — không quảng cáo, không thu thập dữ liệu."
+    />
+    <meta property="og:image" content="https://tungtt93.github.io/tkv-utilities-site/assets/og.png" />
+    <meta property="og:locale" content="vi_VN" />
+    <meta property="og:locale:alternate" content="en_US" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="TKV Utilities — Công cụ miễn phí cho Windows nhanh hơn, gọn hơn, an toàn hơn"
+    />
+    <meta
+      name="twitter:description"
+      content="Miễn phí cho cộng đồng. Không quảng cáo, không thu thập dữ liệu."
+    />
+    <meta name="twitter:image" content="https://tungtt93.github.io/tkv-utilities-site/assets/og.png" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <script id="software-jsonld" type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "TKV Utilities",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Windows 10, Windows 11, macOS 12+",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "description": "Free community system utilities for Windows and macOS. Safe cleanup, ports, processes, disk analysis. No ads, no telemetry.",
+        "url": "https://tungtt93.github.io/tkv-utilities-site/",
+        "image": "https://tungtt93.github.io/tkv-utilities-site/assets/og.png"
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-i18n="a11y.skip">Chuyển đến nội dung chính</a>
+
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="#top" aria-label="TKV Utilities">
+          <img src="assets/icon-128.png" width="36" height="36" alt="" />
+          <span>TKV Utilities</span>
+        </a>
+
+        <nav class="nav-center" id="primary-nav" aria-label="Primary" data-i18n-attr="aria-label:nav.primary">
+          <a href="#features" data-i18n="nav.features">Tính năng</a>
+          <a href="#download" data-i18n="nav.download">Tải về</a>
+          <a href="#steps" data-i18n="nav.guide">Hướng dẫn</a>
+          <a href="#faq" data-i18n="nav.faq">FAQ</a>
+          <a href="#community" data-i18n="nav.contribute">Đóng góp</a>
+        </nav>
+
+        <div class="nav-right">
+          <button
+            type="button"
+            class="menu-toggle"
+            id="menu-toggle"
+            aria-controls="primary-nav"
+            aria-expanded="false"
+            data-i18n-attr="aria-label:nav.menuOpen"
+            aria-label="Mở menu"
+          >
+            <span></span><span></span><span></span>
+          </button>
+          <a
+            class="icon-btn"
+            href="https://github.com/tungtt93/tkv-utilities-site"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-i18n-attr="aria-label:nav.github"
+            aria-label="GitHub"
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M12 2C6.48 2 2 6.58 2 12.26c0 4.52 2.87 8.35 6.84 9.7.5.1.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.27 2.75 1.05A9.3 9.3 0 0 1 12 6.84c.85 0 1.71.12 2.51.35 1.9-1.32 2.74-1.05 2.74-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.59.69.48A10.27 10.27 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z"
+              />
+            </svg>
+          </a>
+          <button
+            type="button"
+            class="lang-btn"
+            id="lang-toggle"
+            data-i18n="nav.lang"
+            data-i18n-attr="aria-label:nav.langLabel"
+            aria-label="EN — Chuyển sang English"
+          >
+            EN
+          </button>
+          <a class="btn btn-primary btn-sm" href="#download" data-i18n="nav.cta">Tải miễn phí</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- Hero -->
+      <section class="hero" id="top">
+        <div class="container hero-grid">
+          <div>
+            <p class="badge" data-i18n="hero.badge">Miễn phí — dành cho cộng đồng</p>
+            <h1 data-i18n="hero.titleHtml" data-i18n-html>
+              Công cụ miễn phí cho Windows <span class="accent">nhanh hơn, gọn hơn, an toàn hơn</span>
+            </h1>
+            <p class="hero-lead" data-i18n="hero.lead">
+              TKV Utilities giúp bạn dọn dẹp, quản lý và tối ưu máy tính Windows 10/11 chỉ trong vài phút. Đơn giản,
+              an toàn, không quảng cáo.
+            </p>
+            <div class="cta-row">
+              <a id="hero-cta-win" class="btn btn-primary" href="#download">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span data-i18n="hero.ctaWin">Tải về ngay (Windows)</span>
+              </a>
+              <a class="btn btn-secondary" href="#showcase">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M8 5.5v13l11-6.5-11-6.5Z" />
+                </svg>
+                <span data-i18n="hero.ctaVideo">Xem giao diện</span>
+              </a>
+            </div>
+            <ul class="checks">
+              <li data-i18n="hero.check1">Miễn phí hoàn toàn</li>
+              <li data-i18n="hero.check2">Không quảng cáo</li>
+              <li data-i18n="hero.check3">Không thu thập dữ liệu</li>
+            </ul>
+          </div>
+          <div class="hero-visual">
+            <img
+              data-i18n-img="assets/images/01_hero_laptop.png"
+              src="assets/images/01_hero_laptop.png"
+              width="960"
+              height="720"
+              alt=""
+              data-i18n-attr="alt:hero.imgAlt"
+              loading="eager"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Why -->
+      <section class="section section-white" id="features">
+        <div class="container">
+          <div class="section-head">
+            <p class="kicker" data-i18n="why.kicker">Nhỏ gọn · Hiệu quả · An toàn</p>
+            <h2 data-i18n="why.title">Vì sao nên dùng TKV Utilities?</h2>
+          </div>
+          <div class="why-grid">
+            <article class="why-card">
+              <div class="why-icon blue" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M3 6h18M8 6V4h8v2m-1 0v14a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V6" stroke-linecap="round" />
+                </svg>
+              </div>
+              <h3 data-i18n="why.1.title">Dọn dẹp thông minh</h3>
+              <p data-i18n="why.1.body">Xóa rác hệ thống, cache trình duyệt và file tạm an toàn.</p>
+            </article>
+            <article class="why-card">
+              <div class="why-icon purple" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 15l7-12 2 7 5 2-7 12-2-7-5-2Z" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <h3 data-i18n="why.2.title">Quản lý hệ thống</h3>
+              <p data-i18n="why.2.body">Port, tiến trình, khởi động, dịch vụ và ứng dụng.</p>
+            </article>
+            <article class="why-card">
+              <div class="why-icon green" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="3" width="7" height="7" rx="1" />
+                  <rect x="14" y="3" width="7" height="7" rx="1" />
+                  <rect x="3" y="14" width="7" height="7" rx="1" />
+                  <rect x="14" y="14" width="7" height="7" rx="1" />
+                </svg>
+              </div>
+              <h3 data-i18n="why.3.title">Phân tích dung lượng</h3>
+              <p data-i18n="why.3.body">Treemap, file lớn nhất, lịch sử ổ đĩa.</p>
+            </article>
+            <article class="why-card">
+              <div class="why-icon cyan" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="3" />
+                  <path d="M12 2v2m0 16v2M2 12h2m16 0h2m-3.5-6.5-1.4 1.4M6.9 17.1l-1.4 1.4m0-12.8 1.4 1.4m10.2 10.2 1.4 1.4" />
+                </svg>
+              </div>
+              <h3 data-i18n="why.4.title">Nhiều công cụ hữu ích</h3>
+              <p data-i18n="why.4.body">Docker &amp; WSL, hosts, biến môi trường, phục hồi file.</p>
+            </article>
+            <article class="why-card">
+              <div class="why-icon indigo" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 3l8 4v5c0 5-3.5 8.5-8 9.5C7.5 20.5 4 17 4 12V7l8-4Z" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <h3 data-i18n="why.5.title">An toàn và tin cậy</h3>
+              <p data-i18n="why.5.body">Vùng bảo vệ cứng, dry-run mặc định, UAC chỉ khi cần.</p>
+            </article>
+            <article class="why-card">
+              <div class="why-icon pink" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 21s-6.7-4.35-9.33-8.1C.8 10.2 1.5 6.5 4.6 5.1 7 4 9.4 5.1 12 7.6 14.6 5.1 17 4 19.4 5.1c3.1 1.4 3.8 5.1 1.93 7.8C18.7 16.65 12 21 12 21Z"
+                  />
+                </svg>
+              </div>
+              <h3 data-i18n="why.6.title">Hoàn toàn miễn phí</h3>
+              <p data-i18n="why.6.body">Dành cho cộng đồng: không phí, không quảng cáo.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Steps -->
+      <section class="section section-soft" id="steps">
+        <div class="container">
+          <div class="section-head">
+            <p class="kicker" data-i18n="steps.kicker">Dễ dàng sử dụng</p>
+            <h2 data-i18n="steps.title">Chỉ 3 bước để máy tính gọn gàng hơn</h2>
+          </div>
+          <div class="steps">
+            <article class="step">
+              <div class="step-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <h3 data-i18n="steps.1.title">Tải về và chạy</h3>
+              <p data-i18n="steps.1.body">Giải nén zip portable, mở tkv.exe — không cần cài đặt.</p>
+            </article>
+            <article class="step">
+              <div class="step-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="7" />
+                  <path d="m20 20-3.5-3.5" stroke-linecap="round" />
+                </svg>
+              </div>
+              <h3 data-i18n="steps.2.title">Quét hệ thống</h3>
+              <p data-i18n="steps.2.body">Xem dung lượng, rác có thể dọn và port/tiến trình.</p>
+            </article>
+            <article class="step">
+              <div class="step-icon purple" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <h3 data-i18n="steps.3.title">Dọn dẹp và tối ưu</h3>
+              <p data-i18n="steps.3.body">Chọn mục, xác nhận, thực thi. Mọi thao tác vào nhật ký.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Showcase -->
+      <section class="section section-white" id="showcase">
+        <div class="container">
+          <div class="section-head">
+            <p class="kicker" data-i18n="showcase.kicker">Trải nghiệm thực tế</p>
+            <h2 data-i18n="showcase.title">Giao diện hiện đại, dễ sử dụng</h2>
+            <p data-i18n="showcase.lead">Fluent UI, tiếng Việt / English, chế độ sáng–tối theo hệ thống. Kéo để xem thêm, bấm ảnh để phóng to.</p>
+          </div>
+
+          <div class="shot-slider" id="shot-slider" role="region" aria-roledescription="carousel" data-i18n-attr="aria-label:showcase.sliderLabel" aria-label="Ảnh chụp màn hình ứng dụng">
+            <div class="shot-scroller" data-shot-scroller tabindex="0">
+              <figure class="shot-slide is-active" data-shot-slide data-index="0">
+                <button type="button" class="shot-open" data-shot-open data-i18n-attr="aria-label:showcase.expand" aria-label="Phóng to ảnh">
+                  <div class="shot-frame">
+                    <img
+                      data-i18n-img="assets/screenshots/overview.png"
+                      src="assets/screenshots/overview.png"
+                      width="1936"
+                      height="1048"
+                      alt=""
+                      data-i18n-attr="alt:showcase.slide1.alt"
+                      loading="lazy"
+                      decoding="async"
+                      draggable="false"
+                    />
+                  </div>
+                </button>
+                <figcaption data-i18n="showcase.slide1.caption">Tổng quan hệ thống</figcaption>
+              </figure>
+              <figure class="shot-slide" data-shot-slide data-index="1">
+                <button type="button" class="shot-open" data-shot-open data-i18n-attr="aria-label:showcase.expand" aria-label="Phóng to ảnh">
+                  <div class="shot-frame">
+                    <img
+                      data-i18n-img="assets/screenshots/storage.png"
+                      src="assets/screenshots/storage.png"
+                      width="1936"
+                      height="1048"
+                      alt=""
+                      data-i18n-attr="alt:showcase.slide2.alt"
+                      loading="lazy"
+                      decoding="async"
+                      draggable="false"
+                    />
+                  </div>
+                </button>
+                <figcaption data-i18n="showcase.slide2.caption">Phân tích dung lượng</figcaption>
+              </figure>
+              <figure class="shot-slide" data-shot-slide data-index="2">
+                <button type="button" class="shot-open" data-shot-open data-i18n-attr="aria-label:showcase.expand" aria-label="Phóng to ảnh">
+                  <div class="shot-frame">
+                    <img
+                      data-i18n-img="assets/screenshots/cleanup.png"
+                      src="assets/screenshots/cleanup.png"
+                      width="1936"
+                      height="1048"
+                      alt=""
+                      data-i18n-attr="alt:showcase.slide3.alt"
+                      loading="lazy"
+                      decoding="async"
+                      draggable="false"
+                    />
+                  </div>
+                </button>
+                <figcaption data-i18n="showcase.slide3.caption">Dọn dẹp hệ thống</figcaption>
+              </figure>
+              <figure class="shot-slide" data-shot-slide data-index="3">
+                <button type="button" class="shot-open" data-shot-open data-i18n-attr="aria-label:showcase.expand" aria-label="Phóng to ảnh">
+                  <div class="shot-frame">
+                    <img
+                      data-i18n-img="assets/screenshots/network.png"
+                      src="assets/screenshots/network.png"
+                      width="1936"
+                      height="1048"
+                      alt=""
+                      data-i18n-attr="alt:showcase.slide4.alt"
+                      loading="lazy"
+                      decoding="async"
+                      draggable="false"
+                    />
+                  </div>
+                </button>
+                <figcaption data-i18n="showcase.slide4.caption">Mạng &amp; Port</figcaption>
+              </figure>
+            </div>
+
+            <div class="shot-dots" data-shot-dots></div>
+            <p class="sr-only" data-shot-status aria-live="polite" aria-atomic="true"></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Download -->
+      <section class="section section-soft" id="download">
+        <div class="container download-grid">
+          <div class="download-copy">
+            <p class="kicker" data-i18n="download.kicker">Tải về</p>
+            <h2 data-i18n="download.title">Hoàn toàn miễn phí cho cộng đồng</h2>
+            <p class="lead" data-i18n="download.lead">
+              Hỗ trợ Windows 10/11, có bản portable. Không quảng cáo, không thu thập dữ liệu.
+            </p>
+            <div class="cta-row">
+              <a id="download-cta-win" class="btn btn-primary" href="#download" data-os="win">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span data-i18n="download.ctaWin">Tải về ngay (Windows)</span>
+              </a>
+              <a id="download-cta-mac" class="btn btn-secondary hidden" href="#download" data-os="mac" hidden>
+                <span data-i18n="download.ctaMac">Tải cho macOS</span>
+              </a>
+              <a class="btn btn-secondary" href="#showcase">
+                <span data-i18n="download.ctaVideo">Xem giao diện</span>
+              </a>
+            </div>
+
+            <ul class="meta-pills">
+              <li>
+                <span data-os-label>Windows 10/11 (64-bit)</span>
+              </li>
+              <li>
+                <span data-i18n="download.metaVer">Phiên bản mới nhất</span>:
+                <strong data-version>—</strong>
+              </li>
+              <li>
+                <span data-i18n="download.metaSize">Dung lượng</span>:
+                <strong data-size>—</strong>
+              </li>
+            </ul>
+
+            <div class="sha-box hidden" id="sha-box" hidden>
+              <p class="label" data-i18n="download.sha">SHA-256</p>
+              <div class="sha-row">
+                <code data-sha>—</code>
+                <button type="button" class="copy-btn" data-copy data-i18n="download.copy">Sao chép</button>
+              </div>
+              <p class="download-note" data-release-note data-i18n="download.noteWin">
+                Nếu SmartScreen cảnh báo: More info → Run anyway. Đối chiếu SHA-256 trước.
+              </p>
+            </div>
+            <p class="download-note hidden" data-unavailable data-i18n="download.unavailable" hidden>
+              Chưa có link tải công khai — cập nhật trong releases.json
+            </p>
+
+            <div class="verify hidden" data-verify hidden>
+              <div data-verify-win>
+                <h3 data-i18n="download.verifyWin">Kiểm tra trên PowerShell:</h3>
+                <pre>Get-FileHash .\TKV-Utilities-*-win-x64-portable.zip -Algorithm SHA256</pre>
+              </div>
+              <div data-verify-mac>
+                <h3 data-i18n="download.verifyMac">Kiểm tra trên Terminal:</h3>
+                <pre>shasum -a 256 TKV-Utilities-*-macos-arm64.dmg</pre>
+              </div>
+            </div>
+          </div>
+          <div class="download-visual">
+            <img
+              data-i18n-img="assets/images/03_download_laptop.png"
+              src="assets/images/03_download_laptop.png"
+              width="960"
+              height="720"
+              alt=""
+              data-i18n-attr="alt:download.imgAlt"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Community -->
+      <section class="section section-white" id="community">
+        <div class="container community-grid">
+          <div class="community-copy">
+            <p class="kicker" data-i18n="community.kicker">Cùng xây dựng</p>
+            <h2 data-i18n="community.title">Vì một cộng đồng công nghệ tốt hơn</h2>
+            <p class="lead" data-i18n="community.lead">
+              TKV Utilities được làm miễn phí cho cộng đồng. Góp ý, báo lỗi hoặc theo dõi cập nhật giúp sản phẩm tốt hơn
+              mỗi ngày.
+            </p>
+            <div class="cta-row">
+              <a
+                class="btn btn-primary"
+                href="https://github.com/tungtt93/tkv-utilities-site/issues"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-i18n="community.feedback"
+                >Đóng góp ý kiến</a
+              >
+              <a
+                class="btn btn-secondary"
+                href="https://github.com/tungtt93/tkv-utilities-site"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-i18n="community.github"
+                >Theo dõi trên GitHub</a
+              >
+            </div>
+          </div>
+          <div class="community-visual">
+            <img
+              data-i18n-img="assets/images/04_community.png"
+              src="assets/images/04_community.png"
+              width="960"
+              height="720"
+              alt=""
+              data-i18n-attr="alt:community.imgAlt"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section section-soft faq" id="faq">
+        <div class="container">
+          <div class="section-head">
+            <p class="kicker" data-i18n="faq.kicker">Câu hỏi thường gặp</p>
+            <h2 data-i18n="faq.title">FAQ</h2>
+          </div>
+          <div class="faq-grid">
+            <div>
+              <details open>
+                <summary data-i18n="faq.1.q">TKV Utilities có miễn phí không?</summary>
+                <p data-i18n="faq.1.a">Có. Miễn phí cho cộng đồng: không phí, không quảng cáo, không thu thập dữ liệu.</p>
+              </details>
+              <details>
+                <summary data-i18n="faq.2.q">Phần mềm có an toàn không?</summary>
+                <p data-i18n="faq.2.a">Có. Dry-run bật mặc định; mọi thao tác phá hủy đều xem trước và ghi nhật ký.</p>
+              </details>
+              <details>
+                <summary data-i18n="faq.3.q">Có cần cài đặt không?</summary>
+                <p data-i18n="faq.3.a">Không. Bản Windows là portable: giải nén và chạy tkv.exe.</p>
+              </details>
+              <details>
+                <summary data-i18n="faq.4.q">Vì sao Windows SmartScreen cảnh báo?</summary>
+                <p data-i18n="faq.4.a">Bản phát hành có thể chưa ký số. Đối chiếu SHA-256 rồi chọn Run anyway.</p>
+              </details>
+              <details>
+                <summary data-i18n="faq.5.q">Dữ liệu lưu ở đâu? Gỡ thế nào?</summary>
+                <p data-i18n="faq.5.a">Mặc định: %LOCALAPPDATA%\TKV. Gỡ bằng cách thoát app rồi xóa exe và thư mục dữ liệu.</p>
+              </details>
+            </div>
+            <aside class="faq-aside">
+              <div class="faq-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M21 12a8 8 0 0 1-11.5 7.2L5 20l.9-3.6A8 8 0 1 1 21 12Z"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <h3 data-i18n="faq.aside.title">Bạn còn câu hỏi khác?</h3>
+              <p data-i18n="faq.aside.body">Gửi góp ý hoặc báo lỗi — chúng tôi đọc từng tin.</p>
+              <a
+                class="btn"
+                href="https://github.com/tungtt93/tkv-utilities-site/issues"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-i18n="faq.aside.cta"
+                >Liên hệ / Gửi câu hỏi</a
+              >
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div>
+            <a class="brand" href="#top">
+              <img src="assets/icon-128.png" width="32" height="32" alt="" />
+              <span>TKV Utilities</span>
+            </a>
+            <p class="footer-tagline" data-i18n="footer.tagline">Miễn phí cho cộng đồng</p>
+          </div>
+          <nav class="footer-nav" aria-label="Footer">
+            <a href="#features" data-i18n="nav.features">Tính năng</a>
+            <a href="#download" data-i18n="nav.download">Tải về</a>
+            <a href="#steps" data-i18n="nav.guide">Hướng dẫn</a>
+            <a href="#faq" data-i18n="nav.faq">FAQ</a>
+            <a href="#community" data-i18n="nav.contribute">Đóng góp</a>
+          </nav>
+        </div>
+        <div class="footer-bottom">
+          <p data-i18n="footer.copy">© 2026 TKV Utilities. Miễn phí cho cộng đồng.</p>
+          <a
+            class="icon-btn"
+            href="https://github.com/tungtt93/tkv-utilities-site"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-i18n-attr="aria-label:nav.github"
+            aria-label="GitHub"
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M12 2C6.48 2 2 6.58 2 12.26c0 4.52 2.87 8.35 6.84 9.7.5.1.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.27 2.75 1.05A9.3 9.3 0 0 1 12 6.84c.85 0 1.71.12 2.51.35 1.9-1.32 2.74-1.05 2.74-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.59.69.48A10.27 10.27 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <dialog class="shot-lightbox" data-shot-lightbox aria-modal="true">
+      <button type="button" class="shot-lightbox-close" data-shot-lb-close data-i18n-attr="aria-label:showcase.close" aria-label="Đóng">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M6 6l12 12M18 6 6 18" stroke-linecap="round" />
+        </svg>
+      </button>
+      <div class="shot-lightbox-stage">
+        <img class="shot-lightbox-img" data-shot-lb-img alt="" />
+      </div>
+      <div class="shot-lightbox-thumbs" data-shot-lb-thumbs role="tablist"></div>
+    </dialog>
+
+    <script src="i18n.js" defer></script>
+    <script src="main.js" defer></script>
+  </body>
+</html>
