@@ -1,0 +1,14 @@
+{
+  "version": "0.1.1",
+  "date": "2026-10-08",
+  "windows": {
+    "url": "https://github.com/tungtt93/tkv-utilities-site/releases/download/v0.1.1/TKV-Utilities-0.1.1-win-x64-portable.zip",
+    "sha256": "d0f6575c9519fba4a581e5339c40ea0295eeac97deac5901aeaee5e511e75f48",
+    "size_mb": 8
+  },
+  "macos": {
+    "url": "https://github.com/tungtt93/tkv-utilities-site/releases/download/v0.1.1/TKV-Utilities-0.1.1-macos-arm64.dmg",
+    "sha256": "ad98999d8b82ad7289d6f15899220db1d98e4776dcb8b79a03ec3762644c5900",
+    "size_mb": 5.8
+  }
+}
